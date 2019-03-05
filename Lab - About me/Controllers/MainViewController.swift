@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Lab - About me
 //
 //  Created by Arkadiy Grigoryanc on 05/03/2019.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tabBarController?.tabBar.selectedItem?.badgeValue = nil
+        
     }
 
 

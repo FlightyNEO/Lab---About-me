@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		58A31E4F222EA0A8009D3388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A31E4E222EA0A8009D3388 /* AppDelegate.swift */; };
-		58A31E51222EA0A8009D3388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A31E50222EA0A8009D3388 /* ViewController.swift */; };
+		58A31E51222EA0A8009D3388 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A31E50222EA0A8009D3388 /* MainViewController.swift */; };
 		58A31E54222EA0A8009D3388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A31E52222EA0A8009D3388 /* Main.storyboard */; };
 		58A31E56222EA0AA009D3388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A31E55222EA0AA009D3388 /* Assets.xcassets */; };
 		58A31E59222EA0AA009D3388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A31E57222EA0AA009D3388 /* LaunchScreen.storyboard */; };
+		58A31E64222EA909009D3388 /* file.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 58A31E63222EA909009D3388 /* file.pdf */; };
+		58A31E66222EA96A009D3388 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A31E65222EA96A009D3388 /* PDFViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58A31E4B222EA0A8009D3388 /* Lab - About me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab - About me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A31E4E222EA0A8009D3388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58A31E50222EA0A8009D3388 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58A31E50222EA0A8009D3388 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		58A31E53222EA0A8009D3388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58A31E55222EA0AA009D3388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58A31E58222EA0AA009D3388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58A31E5A222EA0AA009D3388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58A31E63222EA909009D3388 /* file.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = file.pdf; sourceTree = "<group>"; };
+		58A31E65222EA96A009D3388 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		58A31E4D222EA0A8009D3388 /* Lab - About me */ = {
 			isa = PBXGroup;
 			children = (
+				58A31E67222EA97B009D3388 /* Controllers */,
+				58A31E60222EA8B1009D3388 /* Supporting files */,
+				58A31E5A222EA0AA009D3388 /* Info.plist */,
+				58A31E62222EA8CC009D3388 /* Resources */,
+			);
+			path = "Lab - About me";
+			sourceTree = "<group>";
+		};
+		58A31E60222EA8B1009D3388 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
 				58A31E4E222EA0A8009D3388 /* AppDelegate.swift */,
-				58A31E50222EA0A8009D3388 /* ViewController.swift */,
 				58A31E52222EA0A8009D3388 /* Main.storyboard */,
 				58A31E55222EA0AA009D3388 /* Assets.xcassets */,
 				58A31E57222EA0AA009D3388 /* LaunchScreen.storyboard */,
-				58A31E5A222EA0AA009D3388 /* Info.plist */,
 			);
-			path = "Lab - About me";
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		58A31E62222EA8CC009D3388 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58A31E63222EA909009D3388 /* file.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		58A31E67222EA97B009D3388 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58A31E50222EA0A8009D3388 /* MainViewController.swift */,
+				58A31E65222EA96A009D3388 /* PDFViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +155,7 @@
 				58A31E59222EA0AA009D3388 /* LaunchScreen.storyboard in Resources */,
 				58A31E56222EA0AA009D3388 /* Assets.xcassets in Resources */,
 				58A31E54222EA0A8009D3388 /* Main.storyboard in Resources */,
+				58A31E64222EA909009D3388 /* file.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58A31E51222EA0A8009D3388 /* ViewController.swift in Sources */,
+				58A31E66222EA96A009D3388 /* PDFViewController.swift in Sources */,
+				58A31E51222EA0A8009D3388 /* MainViewController.swift in Sources */,
 				58A31E4F222EA0A8009D3388 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
