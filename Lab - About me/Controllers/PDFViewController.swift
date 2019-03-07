@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import PDFKit
 
 class PDFViewController: MainViewController {
     
@@ -17,42 +18,34 @@ class PDFViewController: MainViewController {
     }()
     
     // MARK: - Outlets
-    @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var activtyIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var pdfView: PDFView! {
+        didSet {
+            pdfView.displayMode = .singlePageContinuous
+            pdfView.autoScales = true
+        }
+    }
     
     // MARK: - Life ciles
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set webView
-        webView.navigationDelegate = self
-        
         openFile()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        activtyIndicator.startAnimating()
+        pdfView.autoScales = true
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        webView.reload()
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        pdfView.autoScales = true
     }
     
     // MARK: - Private methods
     private func openFile() {
-        let request = URLRequest(url: filePath)
-        webView.load(request)
-    }
-    
-}
-
-// MARK: - WKNavigationDelegate
-extension PDFViewController: WKNavigationDelegate {
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        activtyIndicator.stopAnimating()
+        let document = PDFDocument(url: filePath)
+        pdfView.document = document
     }
     
 }

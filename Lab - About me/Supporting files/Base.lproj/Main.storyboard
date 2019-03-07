@@ -18,26 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovh-1I-jLQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="745-ul-T2L">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrc-c8-Zg8" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ovh-1I-jLQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OhS-nL-LLK"/>
-                            <constraint firstItem="ovh-1I-jLQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QIG-ZB-OJa"/>
-                            <constraint firstItem="745-ul-T2L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U1T-qd-DHK"/>
-                            <constraint firstItem="745-ul-T2L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gw4-JP-NVH"/>
-                            <constraint firstItem="ovh-1I-jLQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o09-wo-2Th"/>
-                            <constraint firstItem="ovh-1I-jLQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sAd-0s-kfo"/>
+                            <constraint firstItem="Nrc-c8-Zg8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lre-fd-ptH"/>
+                            <constraint firstItem="Nrc-c8-Zg8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QM1-VI-7tR"/>
+                            <constraint firstAttribute="bottom" secondItem="Nrc-c8-Zg8" secondAttribute="bottom" id="WCB-H6-0Dz"/>
+                            <constraint firstItem="Nrc-c8-Zg8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vv9-hy-xV0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -45,8 +36,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="activtyIndicator" destination="745-ul-T2L" id="EXZ-3d-odi"/>
-                        <outlet property="webView" destination="ovh-1I-jLQ" id="dpV-a4-tIj"/>
+                        <outlet property="pdfView" destination="Nrc-c8-Zg8" id="rOz-g2-cX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -140,6 +130,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ix6-6P-Hvv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cgV-gw-DDC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -155,8 +146,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aboutMe" width="25" height="25"/>
-        <image name="checkList" width="25" height="25"/>
-        <image name="pdfIcon" width="25" height="25"/>
+        <image name="aboutMe" width="50" height="50"/>
+        <image name="checkList" width="50" height="50"/>
+        <image name="pdfIcon" width="50" height="50"/>
     </resources>
 </document>
